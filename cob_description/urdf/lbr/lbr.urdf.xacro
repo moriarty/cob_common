@@ -281,6 +281,30 @@
       </collision>
     </link>
 
+    <!-- joint between arm_7_link and arm_gripper_box -->
+    <joint name="${name}_gripper_box_joint" type="fixed">
+      <origin xyz="0 -0.01 0.17" rpy="0 0 0" />
+      <parent link="${name}_7_link"/>
+      <child link="${name}_gripper_box_link"/>
+    </joint>
+
+    <link name="${name}_gripper_box_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.12 0.18 0.15"/>
+        </geometry>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.12 0.18 0.15"/>
+        </geometry>
+      </collision>
+    </link>
+
+
     <!-- extensions -->
     <xacro:lbr_gazebo name="${name}" />
     <xacro:lbr_transmission name="${name}" />

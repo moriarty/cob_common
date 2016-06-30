@@ -68,7 +68,7 @@
       <child link="${name}_lower_neck_tilt_link"/>
       <axis xyz="0 0 1" />
       <dynamics damping="25.0" friction="10.0"/>
-      <limit effort="200" lower="-0.26" upper="0.25" velocity="0.5"/>
+      <limit effort="200" lower="-0.26" upper="0.90" velocity="0.5"/>
     </joint>
 
 
@@ -132,7 +132,7 @@
       <child link="${name}_upper_neck_tilt_link"/>
       <axis xyz="0 0 1" />
       <dynamics damping="25.0" friction="10.0"/>
-      <limit effort="200" lower="-0.21" upper="0.3" velocity="0.5"/>
+      <limit effort="200" lower="-0.21" upper="0.9" velocity="0.5"/>
     </joint>
 
     <link name="${name}_upper_neck_tilt_link">
